@@ -1,2 +1,4 @@
 # TicTacToeC-
-Creating a tic tac toe game in C# played via terminal 
+## Creating a tic tac toe game in C# played via terminal. 
+
+
