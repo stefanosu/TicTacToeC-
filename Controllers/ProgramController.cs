@@ -6,5 +6,6 @@ namespace TicTacToe.Controllers;
 
 class Program
 {
+    private readonly ILogger<ProgramController> _logger;
 
 }
