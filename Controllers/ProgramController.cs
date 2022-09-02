@@ -4,13 +4,13 @@ using TicTacToe.Models;
 
 namespace TicTacToe.Controllers;
 
-class Program
+class ProgramController : Controller
 {
-    private readonly ILogger<ProgramController> _logger;
-    
-    public ProgramController(ILogger<ProgramController> logger)
-    {
-        _logger = logger;
-    }
+  private readonly ILogger<ProgramController> _logger;
+
+  public ProgramController(ILogger<ProgramController> logger)
+  {
+    _logger = logger;
+  }
 
 }
