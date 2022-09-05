@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/stefanosugbit/Desktop/TicTacToe/TicTacToe.csproj",
+      "projectUniqueName": "/Users/stefanosugbit/Desktop/TicTacToe/TicTacToeC-/TicTacToe.csproj",
       "projectName": "TicTacToe",
-      "projectPath": "/Users/stefanosugbit/Desktop/TicTacToe/TicTacToe.csproj",
+      "projectPath": "/Users/stefanosugbit/Desktop/TicTacToe/TicTacToeC-/TicTacToe.csproj",
       "packagesPath": "/Users/stefanosugbit/.nuget/packages/",
-      "outputPath": "/Users/stefanosugbit/Desktop/TicTacToe/obj/",
+      "outputPath": "/Users/stefanosugbit/Desktop/TicTacToe/TicTacToeC-/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/stefanosugbit/.nuget/NuGet/NuGet.Config"

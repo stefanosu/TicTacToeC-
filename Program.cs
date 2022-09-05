@@ -1,29 +1,52 @@
-var builder = WebApplication.CreateBuilder(args);
+using System.Diagnostics;
+using Microsoft.AspNetCore.Mvc;
+using TicTacToe.Models;
 
-// Add services to the container.
-builder.Services.AddControllersWithViews();
+namespace TicTacToe;
 
-var app = builder.Build();
-
-// Configure the HTTP request pipeline.
-if (!app.Environment.IsDevelopment())
+class Program
 {
-    app.UseExceptionHandler("/Home/Error");
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
-    app.UseHsts();
+  static void Main(string[] args)
+  {
+    int[] board = new int[9];
+    board[0] = 0;
+    board[1] = 0;
+    board[2] = 0;
+    board[3] = 1;
+    board[4] = 2;
+    board[5] = 0;
+    board[6] = 0;
+    board[7] = 0;
+    board[8] = 1;
+
+    for (int i = 0; i < 9; i++)
+    {
+      // Console.WriteLine("Square " + i + " contains " + board[i]);
+      //priny x or o for each square 
+      // 0 means unoccupied. If 1 means player 1 (X) 2 means player 2 (0)
+      if (board[i] == 0)
+      {
+        Console.Write(".");
+      }
+      if (board[i] == 1)
+      {
+        Console.Write("X");
+      }
+      if (board[i] == 2)
+      {
+        Console.Write("O");
+      }
+      //print a new line every 3rd char
+      if (i == 2 || i == 5 || i == 8)
+      {
+        Console.WriteLine();
+      }
+    }
+    printBoard();
+  }
+
+  private static void printBoard()
+  {
+    throw new NotImplementedException();
+  }
 }
-
-app.UseHttpsRedirection();
-app.UseStaticFiles();
-
-app.UseRouting();
-
-app.UseAuthorization();
-
-app.MapControllerRoute(
-    name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
-
-app.Run();
-
-
