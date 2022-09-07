@@ -20,7 +20,13 @@ class Program
     board[8] = 1;
 
     printBoard();
-    
+
+    Console.WriteLine("Please enter a number from 0 to 8");
+    int userTurn = int.Parse(Console.ReadLine());
+    Console.WriteLine("You typed " + userTurn);
+
+    board[userTurn] = 1;
+    printBoard();
   }
 
   private static void printBoard()
