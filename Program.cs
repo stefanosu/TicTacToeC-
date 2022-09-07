@@ -20,6 +20,7 @@ class Program
     board[8] = 1;
 
     printBoard();
+    
   }
 
   private static void printBoard()
