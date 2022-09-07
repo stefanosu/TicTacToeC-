@@ -6,9 +6,9 @@ namespace TicTacToe;
 
 class Program
 {
+  static int[] board = new int[9];
   static void Main(string[] args)
   {
-    int[] board = new int[9];
     board[0] = 0;
     board[1] = 0;
     board[2] = 0;
@@ -19,6 +19,11 @@ class Program
     board[7] = 0;
     board[8] = 1;
 
+    printBoard();
+  }
+
+  private static void printBoard()
+  {
     for (int i = 0; i < 9; i++)
     {
       // Console.WriteLine("Square " + i + " contains " + board[i]);
@@ -42,11 +47,5 @@ class Program
         Console.WriteLine();
       }
     }
-    printBoard();
-  }
-
-  private static void printBoard()
-  {
-    throw new NotImplementedException();
   }
 }
