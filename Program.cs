@@ -33,7 +33,6 @@ class Program
   {
     for (int i = 0; i < 9; i++)
     {
-      // Console.WriteLine("Square " + i + " contains " + board[i]);
       //priny x or o for each square 
       // 0 means unoccupied. If 1 means player 1 (X) 2 means player 2 (0)
       if (board[i] == 0)
