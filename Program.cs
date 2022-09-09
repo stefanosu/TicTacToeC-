@@ -19,14 +19,34 @@ class Program
     board[7] = 0;
     board[8] = 1;
 
-    printBoard();
+    int userTurn = -1;
+    int computerTurn = -1;
+    Random rand = new Random();
 
-    Console.WriteLine("Please enter a number from 0 to 8");
-    int userTurn = int.Parse(Console.ReadLine());
-    Console.WriteLine("You typed " + userTurn);
-
-    board[userTurn] = 1;
-    printBoard();
+    while (true)
+    {
+      //don't allow the human to choose an already occupied square 
+      while (userTurn == -1 || board[userTurn] != 0)
+      {
+        Console.WriteLine("Please enter a number from 0 to 8");
+        userTurn = int.Parse(Console.ReadLine());
+        Console.WriteLine("You typed " + userTurn);
+      }
+      board[userTurn] = 1;
+      // don't let the computer pick an invalid number
+      while (computerTurn == -1 || board[computerTurn] != 0)
+      {
+        computerTurn = rand.Next(8);
+        Console.WriteLine("Computer chooses " + computerTurn);
+      }
+      board[computerTurn] = 2;
+      printBoard();
+    }
+  }
+  private static int checkForWinner()
+  {
+    //return 0 if nobody won
+    return 0;
   }
 
   private static void printBoard()
