@@ -52,6 +52,13 @@ class Program
     {
       return board[0];
     }
+
+    //first column 
+    if (board[1] == board[5] && board[5] == board[7])
+    {
+      return board[1];
+    }
+
     //second row
     if (board[3] == board[4] && board[4] == board[5])
     {
