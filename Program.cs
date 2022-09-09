@@ -23,7 +23,7 @@ class Program
     int computerTurn = -1;
     Random rand = new Random();
 
-    while (true)
+    while (checkForWinner() == 0)
     {
       //don't allow the human to choose an already occupied square 
       while (userTurn == -1 || board[userTurn] != 0)
@@ -46,6 +46,22 @@ class Program
   private static int checkForWinner()
   {
     //return 0 if nobody won
+
+    //top row
+    if (board[0] == board[1] && board[1] == board[2])
+    {
+      return board[0];
+    }
+    //second row
+    if (board[3] == board[4] && board[4] == board[5])
+    {
+      return board[3];
+    }
+    //third row
+    if (board[6] == board[7] && board[7] == board[8])
+    {
+      return board[6];
+    }
     return 0;
   }
 
