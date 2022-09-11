@@ -42,6 +42,7 @@ class Program
       board[computerTurn] = 2;
       printBoard();
     }
+    Console.WriteLine("Player " + checkForWinner() + "won the gane!");
   }
   private static int checkForWinner()
   {
@@ -52,13 +53,7 @@ class Program
     {
       return board[0];
     }
-
-    //first column 
-    if (board[1] == board[5] && board[5] == board[7])
-    {
-      return board[1];
-    }
-
+    
     //second row
     if (board[3] == board[4] && board[4] == board[5])
     {
@@ -68,6 +63,36 @@ class Program
     if (board[6] == board[7] && board[7] == board[8])
     {
       return board[6];
+    }
+   
+    //first column 
+    if (board[0] == board[3] && board[3] == board[6])
+    {
+      return board[0];
+    }
+    
+    //second column 
+    if (board[1] == board[4] && board[4] == board[7])
+    {
+      return board[1];
+    }
+     
+    //third column 
+    if (board[2] == board[5] && board[5] == board[8])
+    {
+      return board[1];
+    }
+    
+     //first diagonal 
+    if (board[0] == board[4] && board[4] == board[8])
+    {
+      return board[0];
+    }
+    
+     //second diagonal 
+    if (board[2] == board[4] && board[4] == board[6])
+    {
+      return board[2];
     }
     return 0;
   }
