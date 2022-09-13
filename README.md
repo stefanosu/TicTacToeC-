@@ -6,4 +6,4 @@
 #### The first player to get 3 of her marks in a row (up, down, across, or diagonally) is the winner.
 #### When all 9 squares are full, the game is over. 
 
-### increase computer character's level of difficulty. 
+##### increase computer character's level of difficulty. 
