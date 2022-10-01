@@ -112,7 +112,6 @@ class Program
       //print a new line every 3rd char
       if (i == 2 || i == 5 || i == 8)
       {
-        Console.WriteLine();
       }
     }
   }
